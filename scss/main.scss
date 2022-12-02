@@ -1,0 +1,156 @@
+@import "variables", "reset";
+
+body {
+  width: 100%;
+  height: 100%;
+  background-color: $color4;
+}
+
+.main-section {
+  margin: 2rem auto;
+  width: 90%;
+  max-width: 40rem;
+  background-color: #fff;
+  border-radius: 1rem;
+  @media (min-width: 1024px) {
+    margin-top: 20rem;
+
+    display: flex;
+    max-width: 100rem;
+  }
+  .main-image {
+    width: 100%;
+    max-width: 40rem;
+    height: auto;
+    border-radius: 1rem 1rem 0 0;
+    @media (min-width: 1024px) {
+      width: 40%;
+      height: auto;
+      border-radius: 1rem 0 0 1rem;
+    }
+  }
+  .content-section {
+    width: 100%;
+    margin: 2rem auto;
+    @media (min-width: 1024px) {
+      margin-top: 3rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
+    .main-header {
+      margin: auto 2rem;
+      font-size: 1.8rem;
+      color: $color1;
+      @media (min-width: 1024px) {
+        margin: 0 2rem;
+      }
+    }
+    .paragraph {
+      margin: 1rem 2rem 2rem;
+      font-size: 1.5rem;
+      color: $color2;
+    }
+
+    .footer {
+      margin: 0;
+      padding: 2rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      // display: none;
+      @media (min-width: 1024px) {
+      }
+      .person {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .portret {
+          margin-right: 1.5rem;
+          border-radius: 50%;
+          width: 3.5rem;
+          height: 3.5rem;
+        }
+        .person-dates {
+          .name {
+            font-size: 1.4rem;
+            color: $color2;
+          }
+          .date {
+            font-size: 1.4rem;
+            color: $color3;
+          }
+        }
+      }
+      .share-icon {
+        padding: 1rem;
+        width: 4rem;
+        height: 4rem;
+        background-color: $color4;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+    }
+    .social-media {
+      padding: 2rem;
+      margin: 0px;
+      display: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      background-color: $color1;
+      border-radius: 0 0 1rem 1rem;
+      display: none;
+      @media (min-width: 1024px) {
+        position: absolute;
+        height: 5rem;
+        border-radius: 1rem;
+        justify-content: space-around;
+        // display: none;
+        width: 25rem;
+        margin: 5rem auto 0 39rem;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .share {
+        width: 65%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        .share-text {
+          text-transform: uppercase;
+          font-size: 1.5rem;
+          letter-spacing: 0.5rem;
+          color: $color3;
+          font-weight: 300;
+        }
+        .social-media-icon {
+          cursor: pointer;
+        }
+      }
+      .share-icon-active {
+        @extend .share-icon;
+        padding: 1rem;
+        width: 4rem;
+        height: 4rem;
+        background-color: $color4;
+        border-radius: 50%;
+        @media (min-width: 1024px) {
+        }
+      }
+    }
+  }
+}
+
+.attribution {
+  margin-top: 5rem;
+  text-align: center;
+  font-size: 1.8rem;
+  a {
+    cursor: pointer;
+  }
+}
